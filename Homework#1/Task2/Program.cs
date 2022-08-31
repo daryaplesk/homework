@@ -7,17 +7,9 @@ int b = Convert.ToInt32(Console.ReadLine());
 
 if (a > b)
 {
-    Console.Write("max = ");
-    Console.WriteLine(a);
-    Console.Write(a);
-    Console.Write(" больше чем ");
-    Console.Write(b);
+    Console.WriteLine($"max = {a}\n{a} больше чем {b}");
 }
 else
 {
-    Console.Write("max = ");
-    Console.WriteLine(b);
-    Console.Write(b);
-    Console.Write(" больше чем ");
-    Console.Write(a);  
+    Console.WriteLine($"max = {b}\n{b} больше чем {a}");
 }
