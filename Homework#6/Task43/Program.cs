@@ -11,7 +11,7 @@ double Input(string message)
 {
     double x = (b2 - b1) / (k1 - k2);
     double y = k2 * x + b2;
-    return (x, y);
+    return (Math.Round(x, 1), Math.Round(y, 1));
 }
 
 double b1 = Input("Введите b1: ");
