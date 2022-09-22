@@ -33,7 +33,7 @@ void PrintArray(int[,] array)
 int m = InputData("Введите m: ");
 int n = InputData("Введите n: ");
 
-if ( m <= 0 || n <= 0) System.Console.WriteLine("Введите корректные данные");
+if ( m <= 0 || n <= 0) System.Console.WriteLine("Введены некорректные данные");
 
 int[,] array = new int[m , n];
 FillArrayRandomly(array);
