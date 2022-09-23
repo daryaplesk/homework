@@ -40,9 +40,9 @@ double FindAverageForColumn(int[,] array, int column)
 string FindAverageForAllColumns(int[,] array)
 {
     string result = "";
-    for (int i = 0; i < array.GetLength(1); i++)
+    for (int j = 0; j < array.GetLength(1); j++)
     {
-        result += FindAverageForColumn(array, i) + "; ";
+        result += FindAverageForColumn(array, j) + "; ";
     }
     return result;
 }
