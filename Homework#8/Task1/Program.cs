@@ -26,24 +26,17 @@ void PrintArray(int[,] array)
     }
 }
 
-int SumOfRow(int[,] array, int row)
-{
-    int sum = 0;
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-        sum += array[row, j];
-    }
-    return sum;
-}
-
 int[] SumOfAllRows(int[,] array)
 {
     int[] result = new int[array.GetLength(0)];
     for (int i = 0; i < array.GetLength(0); i++)
-    {
-        result[i] = SumOfRow(array, i);
+    {   
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            result[i] += array[i, j];
+        }
     }
-    return result;
+    return result;   
 }
 
 int FindMin(int[] array)
@@ -61,7 +54,7 @@ int FindMin(int[] array)
     return index + 1;
 }
 
-int[,] array = CreateAndFillArray(7, 5);
+int[,] array = CreateAndFillArray(5, 5);
 PrintArray(array);
 System.Console.WriteLine("Сумма каждой строки: ");
 int[] result = SumOfAllRows(array);
